@@ -103,7 +103,7 @@ router.post("/login", (req, res) => {
         return res.json({ code: 0 })
       }
       // console.log(user)
-      // 密码匹配
+      // 匹配密码
       bcrypt.compare(password, user.password)
         .then(isMatch => {
           if (isMatch) {
